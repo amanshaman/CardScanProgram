@@ -88,10 +88,15 @@ namespace CardScanProgram
             if (isOk)
             {
                 CustomerControl customer = new CustomerControl();
-                customer.AddRecord(NewCustomer.cardCode, NewCustomer.name, NewCustomer.cardCode, NewCustomer.registrationDate);
+                customer.AddRecord(NewCustomer.cardCode, NewCustomer.name, NewCustomer.cardType, NewCustomer.registrationDate);
                 this.Close();
                 Form1.Form1Instance.Show();
             }            
+        }
+
+        private void NewCardForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Form1.Form1Instance.Show();
         }
     }
 }

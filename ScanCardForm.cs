@@ -36,16 +36,22 @@ namespace CardScanProgram
                     MessageBox.Show("Nenašiel sa zákaznik.");
                     labelIsValid.Text = "Invalid!";
                 }
+
+                // zisti platnost karty
+                DateTime today = DateTime.Today;
+                DateTime timeOfRegistration = DateTime.Parse(temp[3]);
+                //rozdiel v datumoch podla dni musi byt mensi ako typ karty(v mesiacoch) * 30 dni (pocet dni v mesiaci?)
+                if ((today - timeOfRegistration).TotalDays < int.Parse(temp[2]) * 30)
+                {
+                    labelIsValid.Text = "Valid!";
+                }
+                else
+                {
+                    MessageBox.Show("Platnosť karty vypršala.");
+                    labelIsValid.Text = "Invalid!";
+                }
             }
-            if (true)
-            {
-                labelIsValid.Text = "Valid!";
-            }
-            else
-            {
-                MessageBox.Show("Platnosť karty vzpršala.");
-                labelIsValid.Text = "Invalid!";
-            }
+            
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
@@ -62,7 +68,7 @@ namespace CardScanProgram
 
         private void ScanCardForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            Form1.Form1Instance.Show();
         }
     }
 }

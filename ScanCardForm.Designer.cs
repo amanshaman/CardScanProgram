@@ -43,15 +43,16 @@
             // labelScannedCode
             // 
             this.labelScannedCode.AutoSize = true;
+            this.labelScannedCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelScannedCode.Location = new System.Drawing.Point(12, 40);
             this.labelScannedCode.Name = "labelScannedCode";
-            this.labelScannedCode.Size = new System.Drawing.Size(100, 13);
+            this.labelScannedCode.Size = new System.Drawing.Size(196, 25);
             this.labelScannedCode.TabIndex = 3;
             this.labelScannedCode.Text = "Naskenovany kód: ";
             // 
             // textBoxScannedCode
             // 
-            this.textBoxScannedCode.Location = new System.Drawing.Point(118, 37);
+            this.textBoxScannedCode.Location = new System.Drawing.Point(214, 45);
             this.textBoxScannedCode.Name = "textBoxScannedCode";
             this.textBoxScannedCode.Size = new System.Drawing.Size(350, 20);
             this.textBoxScannedCode.TabIndex = 2;
@@ -59,7 +60,7 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(393, 162);
+            this.buttonCancel.Location = new System.Drawing.Point(489, 161);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 12;
@@ -69,7 +70,7 @@
             // 
             // buttonOK
             // 
-            this.buttonOK.Location = new System.Drawing.Point(303, 162);
+            this.buttonOK.Location = new System.Drawing.Point(399, 161);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(75, 23);
             this.buttonOK.TabIndex = 11;
@@ -80,16 +81,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.Location = new System.Drawing.Point(12, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 13);
+            this.label1.Size = new System.Drawing.Size(193, 25);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Meno a priezvisko";
+            this.label1.Text = "Meno a priezvisko:";
             // 
             // textBoxNamAndSurname
             // 
             this.textBoxNamAndSurname.Enabled = false;
-            this.textBoxNamAndSurname.Location = new System.Drawing.Point(118, 72);
+            this.textBoxNamAndSurname.Location = new System.Drawing.Point(214, 80);
             this.textBoxNamAndSurname.Name = "textBoxNamAndSurname";
             this.textBoxNamAndSurname.Size = new System.Drawing.Size(350, 20);
             this.textBoxNamAndSurname.TabIndex = 13;
@@ -97,16 +99,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.Location = new System.Drawing.Point(12, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 13);
+            this.label2.Size = new System.Drawing.Size(167, 25);
             this.label2.TabIndex = 16;
             this.label2.Text = "Dátum vydania: ";
             // 
             // textBoxDate
             // 
             this.textBoxDate.Enabled = false;
-            this.textBoxDate.Location = new System.Drawing.Point(118, 109);
+            this.textBoxDate.Location = new System.Drawing.Point(214, 117);
             this.textBoxDate.Name = "textBoxDate";
             this.textBoxDate.Size = new System.Drawing.Size(350, 20);
             this.textBoxDate.TabIndex = 15;
@@ -114,18 +117,20 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label3.Location = new System.Drawing.Point(12, 143);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.Size = new System.Drawing.Size(95, 25);
             this.label3.TabIndex = 17;
             this.label3.Text = "Validny: ";
             // 
             // labelIsValid
             // 
             this.labelIsValid.AutoSize = true;
+            this.labelIsValid.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelIsValid.Location = new System.Drawing.Point(115, 143);
             this.labelIsValid.Name = "labelIsValid";
-            this.labelIsValid.Size = new System.Drawing.Size(43, 13);
+            this.labelIsValid.Size = new System.Drawing.Size(88, 25);
             this.labelIsValid.TabIndex = 18;
             this.labelIsValid.Text = "isValid?";
             // 
@@ -133,7 +138,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 217);
+            this.ClientSize = new System.Drawing.Size(629, 223);
             this.Controls.Add(this.labelIsValid);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -144,6 +149,7 @@
             this.Controls.Add(this.buttonOK);
             this.Controls.Add(this.labelScannedCode);
             this.Controls.Add(this.textBoxScannedCode);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ScanCardForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ScanCardForm_FormClosing);
             this.ResumeLayout(false);

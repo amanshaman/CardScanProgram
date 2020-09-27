@@ -34,9 +34,10 @@
             // 
             // buttonCreateCard
             // 
-            this.buttonCreateCard.Location = new System.Drawing.Point(20, 28);
+            this.buttonCreateCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonCreateCard.Location = new System.Drawing.Point(41, 41);
             this.buttonCreateCard.Name = "buttonCreateCard";
-            this.buttonCreateCard.Size = new System.Drawing.Size(160, 105);
+            this.buttonCreateCard.Size = new System.Drawing.Size(270, 159);
             this.buttonCreateCard.TabIndex = 0;
             this.buttonCreateCard.Text = "Vytvorenie novej karty";
             this.buttonCreateCard.UseVisualStyleBackColor = true;
@@ -44,9 +45,10 @@
             // 
             // buttonScanCard
             // 
-            this.buttonScanCard.Location = new System.Drawing.Point(196, 28);
+            this.buttonScanCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonScanCard.Location = new System.Drawing.Point(345, 41);
             this.buttonScanCard.Name = "buttonScanCard";
-            this.buttonScanCard.Size = new System.Drawing.Size(162, 105);
+            this.buttonScanCard.Size = new System.Drawing.Size(272, 159);
             this.buttonScanCard.TabIndex = 1;
             this.buttonScanCard.Text = "kontrola existujucej karty";
             this.buttonScanCard.UseVisualStyleBackColor = true;
@@ -56,9 +58,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(381, 163);
+            this.ClientSize = new System.Drawing.Size(653, 237);
             this.Controls.Add(this.buttonScanCard);
             this.Controls.Add(this.buttonCreateCard);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.ResumeLayout(false);
