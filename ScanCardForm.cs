@@ -30,6 +30,23 @@ namespace CardScanProgram
                     textBoxNamAndSurname.Text = temp[1];
                     textBoxDate.Text = temp[3];
                     labelIsValid.Text = "Valid!";
+
+                    // zisti platnost karty
+                    DateTime today = DateTime.Today;
+                    DateTime timeOfRegistration = DateTime.Parse(temp[3]);
+
+                    //ak rozdiel medzi dnesnym a registracny mesiacom je mensi rovny poctu zaplatenych mesiacov
+                    //a ak je dnesny den mensi rovny registracnemu dnu tak je vsetko ok. Inak karta vyprsala.
+                    if (Math.Abs(timeOfRegistration.Month - today.Month) <= int.Parse(temp[2]) 
+                        && today.Day < timeOfRegistration.Day)
+                    {
+                        labelIsValid.Text = "Valid!";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Platnosť karty vypršala.");
+                        labelIsValid.Text = "Invalid!";
+                    }
                 }
                 else
                 {
@@ -37,21 +54,10 @@ namespace CardScanProgram
                     labelIsValid.Text = "Invalid!";
                 }
 
-                // zisti platnost karty
-                DateTime today = DateTime.Today;
-                DateTime timeOfRegistration = DateTime.Parse(temp[3]);
-                //rozdiel v datumoch podla dni musi byt mensi ako typ karty(v mesiacoch) * 30 dni (pocet dni v mesiaci?)
-                if ((today - timeOfRegistration).TotalDays < int.Parse(temp[2]) * 30)
-                {
-                    labelIsValid.Text = "Valid!";
-                }
-                else
-                {
-                    MessageBox.Show("Platnosť karty vypršala.");
-                    labelIsValid.Text = "Invalid!";
-                }
+                
+
             }
-            
+
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
