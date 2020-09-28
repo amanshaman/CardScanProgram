@@ -106,18 +106,10 @@
             this.comboBoxTypeOfCard.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTypeOfCard.FormattingEnabled = true;
             this.comboBoxTypeOfCard.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12"});
+            "1 mesačný",
+            "3 mesačný",
+            "6 mesačný",
+            "12 mesačný"});
             this.comboBoxTypeOfCard.Location = new System.Drawing.Point(229, 109);
             this.comboBoxTypeOfCard.Name = "comboBoxTypeOfCard";
             this.comboBoxTypeOfCard.Size = new System.Drawing.Size(121, 21);

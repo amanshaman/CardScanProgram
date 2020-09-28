@@ -39,7 +39,7 @@
             this.buttonCreateCard.Name = "buttonCreateCard";
             this.buttonCreateCard.Size = new System.Drawing.Size(270, 159);
             this.buttonCreateCard.TabIndex = 0;
-            this.buttonCreateCard.Text = "Vytvorenie novej karty";
+            this.buttonCreateCard.Text = "Predaj novej karty";
             this.buttonCreateCard.UseVisualStyleBackColor = true;
             this.buttonCreateCard.Click += new System.EventHandler(this.buttonCreateCard_Click);
             // 
@@ -50,7 +50,7 @@
             this.buttonScanCard.Name = "buttonScanCard";
             this.buttonScanCard.Size = new System.Drawing.Size(272, 159);
             this.buttonScanCard.TabIndex = 1;
-            this.buttonScanCard.Text = "kontrola existujucej karty";
+            this.buttonScanCard.Text = "Kontrola existujucej karty";
             this.buttonScanCard.UseVisualStyleBackColor = true;
             this.buttonScanCard.Click += new System.EventHandler(this.buttonScanCard_Click);
             // 

@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CardScanProgram
@@ -31,18 +29,22 @@ namespace CardScanProgram
                     textBoxDate.Text = temp[3];
                     labelIsValid.Text = "Valid!";
 
-                    // zisti platnost karty
-                    DateTime today = DateTime.Today;
+                    // zisti platnost karty                    
                     DateTime timeOfRegistration = DateTime.Parse(temp[3]);
+                    string months = temp[2].Split(' ')[0];
 
-                    //ak rozdiel medzi dnesnym a registracny mesiacom je mensi rovny poctu zaplatenych mesiacov
-                    //a ak je dnesny den mensi rovny registracnemu dnu tak je vsetko ok. Inak karta vyprsala.
-                    if (Math.Abs(timeOfRegistration.Month - today.Month) <= int.Parse(temp[2]) 
-                        && today.Day < timeOfRegistration.Day)
+                    DateTime expirationDate = timeOfRegistration.AddMonths(int.Parse(months));
+
+                    int result = DateTime.Compare(expirationDate, DateTime.Today);
+
+                    //-1 = expirovalo
+                    //0 - dnes expiruje ale je platna
+                    //1 - este je platna
+                    if (result == 1 || result == 0)
                     {
                         labelIsValid.Text = "Valid!";
                     }
-                    else
+                    else if (result == -1)
                     {
                         MessageBox.Show("Platnosť karty vypršala.");
                         labelIsValid.Text = "Invalid!";
@@ -53,11 +55,7 @@ namespace CardScanProgram
                     MessageBox.Show("Nenašiel sa zákaznik.");
                     labelIsValid.Text = "Invalid!";
                 }
-
-                
-
             }
-
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
