@@ -6,25 +6,25 @@ namespace CardScanProgram
 {
     static class NewCustomer
     {
-        static public string cardCode;
-        static public DateTime registrationDate;
-        static public string name;
-        static public string cardType;
+        static public string CardCode { get; set; }
+        static public DateTime RegistrationDate { get; set; }
+        static public string Name { get; set; }
+        static public string CardType { get; set; }
 
 
         static public string GetAllValues()
         {
-            return (NewCustomer.cardCode + " " + NewCustomer.registrationDate.ToString() +
-                " " + NewCustomer.name + " " + NewCustomer.cardType);
+            return (NewCustomer.CardCode + " " + NewCustomer.RegistrationDate.ToString() +
+                " " + NewCustomer.Name + " " + NewCustomer.CardType);
         }
 
         static public Boolean Clear()
         {
             try
             {
-                cardCode = "";                
-                name = "";
-                cardType = "";
+                CardCode = "";                
+                Name = "";
+                CardType = "";
 
                 return true;
             }

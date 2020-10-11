@@ -33,6 +33,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>card_theuser_thecontact_9353.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
@@ -78,6 +84,12 @@
     <Compile Include="ScanCardForm.Designer.cs">
       <DependentUpon>ScanCardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ScanSeasonTicketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScanSeasonTicketForm.Designer.cs">
+      <DependentUpon>ScanSeasonTicketForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,6 +109,9 @@
     <EmbeddedResource Include="ScanCardForm.resx">
       <DependentUpon>ScanCardForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ScanSeasonTicketForm.resx">
+      <DependentUpon>ScanSeasonTicketForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -110,6 +125,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="card_theuser_thecontact_9353.ico" />
+    <Content Include="contactcard_contactcard_tarjetadecontacto_4815.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

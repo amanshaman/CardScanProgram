@@ -109,7 +109,8 @@
             "1 mesačný",
             "3 mesačný",
             "6 mesačný",
-            "12 mesačný"});
+            "12 mesačný",
+            "15 vstupov"});
             this.comboBoxTypeOfCard.Location = new System.Drawing.Point(229, 109);
             this.comboBoxTypeOfCard.Name = "comboBoxTypeOfCard";
             this.comboBoxTypeOfCard.Size = new System.Drawing.Size(121, 21);

@@ -8,7 +8,7 @@ namespace CardScanProgram
     {
         //file is at bin/debug by default
         private string filepath = "CustomerData.txt";
-        public void AddRecord(string cardCode, string name, string cardType, DateTime registrationDate)
+        public void AddRecord(string cardCode, string name, string cardType, DateTime registrationDate )
         {
             try
             {
@@ -43,6 +43,21 @@ namespace CardScanProgram
             }
 
             return null;
+        }
+
+        public Boolean ReplaceNoEntries(string barCode, string newNoEntries)
+        {
+            try
+            {
+                
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());                
+            }
+            return false;
         }
     }
 }

@@ -32,9 +32,11 @@ namespace CardScanProgram
             
         }
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            ScanSeasonTicketForm scanSeasonTicketForm = new ScanSeasonTicketForm();
+            scanSeasonTicketForm.Show();
         }
     }
 }

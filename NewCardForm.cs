@@ -37,7 +37,7 @@ namespace CardScanProgram
             {
                 if (textBoxScannedCode.Text != "")
                 {
-                    NewCustomer.cardCode = textBoxScannedCode.Text;
+                    NewCustomer.CardCode = textBoxScannedCode.Text;
                 }
                 else
                 {
@@ -48,7 +48,7 @@ namespace CardScanProgram
 
                 if (dateTimePicker.Checked)
                 {
-                    NewCustomer.registrationDate = dateTimePicker.Value;
+                    NewCustomer.RegistrationDate = dateTimePicker.Value;
                 }
                 else
                 {
@@ -59,7 +59,7 @@ namespace CardScanProgram
 
                 if (textBoxNameAndSurname.Text != "")
                 {
-                    NewCustomer.name = textBoxNameAndSurname.Text;
+                    NewCustomer.Name = textBoxNameAndSurname.Text;
                 }
                 else
                 {
@@ -70,7 +70,7 @@ namespace CardScanProgram
 
                 if (comboBoxTypeOfCard.SelectedIndex > -1)
                 {
-                    NewCustomer.cardType = comboBoxTypeOfCard.Text;
+                    NewCustomer.CardType = comboBoxTypeOfCard.Text;
                 }
                 else
                 {
@@ -86,7 +86,7 @@ namespace CardScanProgram
             if (isOk)
             {
                 CustomerControl customer = new CustomerControl();
-                customer.AddRecord(NewCustomer.cardCode, NewCustomer.name, NewCustomer.cardType, NewCustomer.registrationDate);
+                customer.AddRecord(NewCustomer.CardCode, NewCustomer.Name, NewCustomer.CardType, NewCustomer.RegistrationDate);
                 this.Close();
                 Form1.Form1Instance.Show();
             }            

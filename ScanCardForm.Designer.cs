@@ -36,8 +36,8 @@
             this.textBoxNamAndSurname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxDate = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.labelIsValid = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelScannedCode
@@ -60,7 +60,7 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(489, 161);
+            this.buttonCancel.Location = new System.Drawing.Point(489, 204);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 12;
@@ -70,7 +70,7 @@
             // 
             // buttonOK
             // 
-            this.buttonOK.Location = new System.Drawing.Point(399, 161);
+            this.buttonOK.Location = new System.Drawing.Point(399, 204);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(75, 23);
             this.buttonOK.TabIndex = 11;
@@ -114,31 +114,31 @@
             this.textBoxDate.Size = new System.Drawing.Size(350, 20);
             this.textBoxDate.TabIndex = 15;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(12, 143);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 25);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Validny: ";
-            // 
             // labelIsValid
             // 
             this.labelIsValid.AutoSize = true;
             this.labelIsValid.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelIsValid.Location = new System.Drawing.Point(115, 143);
+            this.labelIsValid.Location = new System.Drawing.Point(115, 153);
             this.labelIsValid.Name = "labelIsValid";
             this.labelIsValid.Size = new System.Drawing.Size(88, 25);
-            this.labelIsValid.TabIndex = 18;
+            this.labelIsValid.TabIndex = 30;
             this.labelIsValid.Text = "isValid?";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(12, 153);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 25);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Validny: ";
             // 
             // ScanCardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(629, 223);
+            this.ClientSize = new System.Drawing.Size(660, 279);
             this.Controls.Add(this.labelIsValid);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -152,6 +152,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ScanCardForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ScanCardForm_FormClosing);
+            this.Load += new System.EventHandler(this.ScanCardForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,7 +168,7 @@
         private System.Windows.Forms.TextBox textBoxNamAndSurname;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxDate;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelIsValid;
+        private System.Windows.Forms.Label label3;
     }
 }

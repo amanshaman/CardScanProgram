@@ -25,6 +25,13 @@ namespace CardScanProgram
                 string[] temp = customer.SearchRecord(textBoxScannedCode.Text);
                 if (temp != null)
                 {
+                    if (temp[2].Split(' ')[1] != "mesačný")
+                    {
+                        MessageBox.Show("Zlý typ karty! Preukázaná karta nie je vydaná na časove obdobie. Skúste použiť " +
+                            "tlačidlo: Kontrola vstupnej permanentky");
+                        return;
+                    }
+
                     textBoxNamAndSurname.Text = temp[1];
                     textBoxDate.Text = temp[3];
                     labelIsValid.Text = "Valid!";
@@ -73,6 +80,11 @@ namespace CardScanProgram
         private void ScanCardForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Form1.Form1Instance.Show();
+        }
+
+        private void ScanCardForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
