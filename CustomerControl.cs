@@ -49,9 +49,16 @@ namespace CardScanProgram
         {
             try
             {
-                
+                foreach (var line in System.IO.File.ReadAllLines(this.filepath))
+                {
+                    string[] temp = line.Split(',');
+                    if (temp[0] == barCode)
+                    {
+                        Console.WriteLine(line.ToString());
+                        return temp;
+                    }
+                }
                 return true;
-
             }
             catch (Exception ex)
             {

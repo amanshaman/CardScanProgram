@@ -10,10 +10,17 @@ namespace CardScanProgram
 {
     public partial class ScanSeasonTicketForm : Form
     {
-        public ScanSeasonTicketForm()
+        private Boolean manazment;
+        public ScanSeasonTicketForm(Boolean entry)
         {
+            manazment = entry;
             InitializeComponent();
             textBoxScannedCode.Focus();
+            if (manazment)
+            {
+                buttonOdratat.Text = "Uložiť";
+            }
+            
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
@@ -31,6 +38,7 @@ namespace CardScanProgram
         private void ScanSeasonTicketForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Form1.Form1Instance.Show();
+            this.Dispose();
         }
         private CustomerControl customer;
         private void textBoxScannedCode_KeyDown(object sender, KeyEventArgs e)
@@ -52,6 +60,11 @@ namespace CardScanProgram
                     textBoxNamAndSurname.Text = temp[1];
                     textBoxDate.Text = temp[3];
                     comboBoxNoEntry.Text = temp[2].Split(' ')[0];
+                    buttonOdratat.Enabled = true;
+                    if (manazment)
+                    {
+                        comboBoxNoEntry.Enabled = true;
+                    }
                 }
                 else
                 {
@@ -63,13 +76,20 @@ namespace CardScanProgram
         private void buttonOdratat_Click(object sender, EventArgs e)
         {
             int currentNoEntries = int.Parse(comboBoxNoEntry.Text);
-            if (currentNoEntries <= 0)
+            int newNoEntries;
+            if (!manazment)
             {
-                MessageBox.Show("Nedostatok vstupov.");
-                return;
+                if (currentNoEntries <= 0)
+                {
+                    MessageBox.Show("Nedostatok vstupov.");
+                    return;
+                }
+                newNoEntries = currentNoEntries - 1;
             }
-
-            int newNoEntries = currentNoEntries - 1;
+            else
+            {
+                newNoEntries = currentNoEntries;
+            }
             comboBoxNoEntry.Text = newNoEntries.ToString();
             if (!customer.ReplaceNoEntries(textBoxScannedCode.Text, comboBoxNoEntry.Text))
             {
@@ -77,6 +97,7 @@ namespace CardScanProgram
             }
             
             buttonOdratat.Enabled = false;
+            comboBoxNoEntry.Enabled = false;
             buttonOK.Focus();
         }
     }

@@ -95,6 +95,12 @@ namespace CardScanProgram
         private void NewCardForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Form1.Form1Instance.Show();
+            this.Dispose();
+        }
+
+        private void NewCardForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

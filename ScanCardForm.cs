@@ -80,6 +80,7 @@ namespace CardScanProgram
         private void ScanCardForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Form1.Form1Instance.Show();
+            this.Dispose();
         }
 
         private void ScanCardForm_Load(object sender, EventArgs e)

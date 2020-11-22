@@ -46,43 +46,48 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(25, 99);
+            this.label2.Location = new System.Drawing.Point(33, 122);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 25);
+            this.label2.Size = new System.Drawing.Size(210, 31);
             this.label2.TabIndex = 26;
             this.label2.Text = "Dátum vydania: ";
             // 
             // textBoxDate
             // 
             this.textBoxDate.Enabled = false;
-            this.textBoxDate.Location = new System.Drawing.Point(227, 104);
+            this.textBoxDate.Location = new System.Drawing.Point(303, 128);
+            this.textBoxDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxDate.Name = "textBoxDate";
-            this.textBoxDate.Size = new System.Drawing.Size(350, 20);
+            this.textBoxDate.Size = new System.Drawing.Size(465, 22);
             this.textBoxDate.TabIndex = 25;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(25, 62);
+            this.label1.Location = new System.Drawing.Point(33, 76);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 25);
+            this.label1.Size = new System.Drawing.Size(240, 31);
             this.label1.TabIndex = 24;
             this.label1.Text = "Meno a priezvisko:";
             // 
             // textBoxNamAndSurname
             // 
             this.textBoxNamAndSurname.Enabled = false;
-            this.textBoxNamAndSurname.Location = new System.Drawing.Point(227, 67);
+            this.textBoxNamAndSurname.Location = new System.Drawing.Point(303, 82);
+            this.textBoxNamAndSurname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxNamAndSurname.Name = "textBoxNamAndSurname";
-            this.textBoxNamAndSurname.Size = new System.Drawing.Size(350, 20);
+            this.textBoxNamAndSurname.Size = new System.Drawing.Size(465, 22);
             this.textBoxNamAndSurname.TabIndex = 23;
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(502, 196);
+            this.buttonCancel.Location = new System.Drawing.Point(669, 241);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+            this.buttonCancel.Size = new System.Drawing.Size(100, 28);
             this.buttonCancel.TabIndex = 22;
             this.buttonCancel.Text = "späť";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -90,9 +95,10 @@
             // 
             // buttonOK
             // 
-            this.buttonOK.Location = new System.Drawing.Point(421, 196);
+            this.buttonOK.Location = new System.Drawing.Point(561, 241);
+            this.buttonOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonOK.Name = "buttonOK";
-            this.buttonOK.Size = new System.Drawing.Size(75, 23);
+            this.buttonOK.Size = new System.Drawing.Size(100, 28);
             this.buttonOK.TabIndex = 21;
             this.buttonOK.Text = "OK";
             this.buttonOK.UseVisualStyleBackColor = true;
@@ -102,25 +108,29 @@
             // 
             this.labelScannedCode.AutoSize = true;
             this.labelScannedCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelScannedCode.Location = new System.Drawing.Point(25, 27);
+            this.labelScannedCode.Location = new System.Drawing.Point(33, 33);
+            this.labelScannedCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelScannedCode.Name = "labelScannedCode";
-            this.labelScannedCode.Size = new System.Drawing.Size(196, 25);
+            this.labelScannedCode.Size = new System.Drawing.Size(246, 31);
             this.labelScannedCode.TabIndex = 20;
             this.labelScannedCode.Text = "Naskenovany kód: ";
             // 
             // textBoxScannedCode
             // 
-            this.textBoxScannedCode.Location = new System.Drawing.Point(227, 32);
+            this.textBoxScannedCode.Location = new System.Drawing.Point(303, 39);
+            this.textBoxScannedCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxScannedCode.Name = "textBoxScannedCode";
-            this.textBoxScannedCode.Size = new System.Drawing.Size(350, 20);
+            this.textBoxScannedCode.Size = new System.Drawing.Size(465, 22);
             this.textBoxScannedCode.TabIndex = 19;
             this.textBoxScannedCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxScannedCode_KeyDown);
             // 
             // buttonOdratat
             // 
-            this.buttonOdratat.Location = new System.Drawing.Point(238, 169);
+            this.buttonOdratat.Enabled = false;
+            this.buttonOdratat.Location = new System.Drawing.Point(317, 208);
+            this.buttonOdratat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonOdratat.Name = "buttonOdratat";
-            this.buttonOdratat.Size = new System.Drawing.Size(75, 23);
+            this.buttonOdratat.Size = new System.Drawing.Size(100, 28);
             this.buttonOdratat.TabIndex = 31;
             this.buttonOdratat.Text = "Odrátať";
             this.buttonOdratat.UseVisualStyleBackColor = true;
@@ -129,6 +139,7 @@
             // comboBoxNoEntry
             // 
             this.comboBoxNoEntry.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxNoEntry.Enabled = false;
             this.comboBoxNoEntry.FormattingEnabled = true;
             this.comboBoxNoEntry.Items.AddRange(new object[] {
             "0",
@@ -147,18 +158,20 @@
             "13",
             "14",
             "15"});
-            this.comboBoxNoEntry.Location = new System.Drawing.Point(314, 139);
+            this.comboBoxNoEntry.Location = new System.Drawing.Point(419, 171);
+            this.comboBoxNoEntry.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxNoEntry.Name = "comboBoxNoEntry";
-            this.comboBoxNoEntry.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxNoEntry.Size = new System.Drawing.Size(160, 24);
             this.comboBoxNoEntry.TabIndex = 30;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(23, 135);
+            this.label4.Location = new System.Drawing.Point(31, 166);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(280, 25);
+            this.label4.Size = new System.Drawing.Size(352, 31);
             this.label4.TabIndex = 29;
             this.label4.Text = "Pocet ostávajúcich vstupov:";
             // 
@@ -166,17 +179,18 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(25, 169);
+            this.label3.Location = new System.Drawing.Point(33, 208);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(207, 25);
+            this.label3.Size = new System.Drawing.Size(261, 31);
             this.label3.TabIndex = 32;
             this.label3.Text = "Odrátať jeden vstup:";
             // 
             // ScanSeasonTicketForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 242);
+            this.ClientSize = new System.Drawing.Size(825, 298);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonOdratat);
             this.Controls.Add(this.comboBoxNoEntry);
@@ -189,6 +203,7 @@
             this.Controls.Add(this.buttonOK);
             this.Controls.Add(this.labelScannedCode);
             this.Controls.Add(this.textBoxScannedCode);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ScanSeasonTicketForm";
             this.Text = "ScanSeasonTicketForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ScanSeasonTicketForm_FormClosing);

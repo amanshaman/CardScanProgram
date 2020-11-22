@@ -35,7 +35,14 @@ namespace CardScanProgram
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ScanSeasonTicketForm scanSeasonTicketForm = new ScanSeasonTicketForm();
+            ScanSeasonTicketForm scanSeasonTicketForm = new ScanSeasonTicketForm(false);
+            scanSeasonTicketForm.Show();
+        }
+
+        private void btnCardsManagement_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ScanSeasonTicketForm scanSeasonTicketForm = new ScanSeasonTicketForm(true);
             scanSeasonTicketForm.Show();
         }
     }
