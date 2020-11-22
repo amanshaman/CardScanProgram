@@ -49,15 +49,20 @@ namespace CardScanProgram
         {
             try
             {
-                foreach (var line in System.IO.File.ReadAllLines(this.filepath))
+                string[] lines = System.IO.File.ReadAllLines(this.filepath);
+                string entryString = newNoEntries + " vstupov";
+                int i = 0;
+                foreach (var line in lines)
                 {
                     string[] temp = line.Split(',');
                     if (temp[0] == barCode)
                     {
-                        Console.WriteLine(line.ToString());
-                        return temp;
+                        lines[i] = temp[0] + "," + temp[1] + "," + entryString + "," + temp[3];
+                        break;
                     }
+                    i++;
                 }
+                System.IO.File.WriteAllLines(this.filepath, lines);
                 return true;
             }
             catch (Exception ex)
